@@ -63,3 +63,37 @@ function passwordVadlidate() {
         errorpass.style.display = "none";
     }
 };
+
+let element = document.getElementById('open');
+document.getElementById('open').addEventListener('click', function () {
+
+    const passValue = document.getElementById('password');
+    if (passValue.type == "text") {
+        passValue.type = "password"
+        element.style.display = "inline"
+    }
+    else {
+        passValue.type = "text"
+        element.style.display = "none"
+        closeElement.style.display="inline"
+    }
+
+}
+);
+
+let closeElement = document.getElementById('lock');
+document.getElementById('lock').addEventListener('click', function () {
+
+    const passValue = document.getElementById('password');
+    if (passValue.type = "text") {
+        passValue.type = "password"
+        closeElement.style.display = "none"
+          element.style.display="inline"
+    } else {
+        passValue.type = "text";
+        closeElement.style.display = "none"
+      
+
+    }
+
+})
